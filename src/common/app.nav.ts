@@ -145,12 +145,12 @@ export const navItems: {
       _delete: true,
     },
     // <-- divider here -->
-    {
-      name: SPECIAL_DIVIDER,
-      type: 'app',
-      route: SPECIAL_DIVIDER,
-      icon: () => null,
-    },
+    // {
+    //   name: SPECIAL_DIVIDER,
+    //   type: 'app',
+    //   route: SPECIAL_DIVIDER,
+    //   icon: () => null,
+    // },
     // HIDING PERSONAS
     // {
     //   name: 'Personas',
