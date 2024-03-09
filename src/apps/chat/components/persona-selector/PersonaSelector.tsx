@@ -313,7 +313,7 @@ export function PersonaSelector(props: { conversationId: DConversationId, runExa
           {/* Examples Toggle */}
           {/*<Box sx={{ display: 'flex', flexFlow: 'row wrap', flexShrink: 1 }}>*/}
           {fourExamples && showExamplescomponent}
-          {!isCustomPurpose && showPromptComponent}
+          {!isCustomPurpose}
           {/*</Box>*/}
         </Box>
 
