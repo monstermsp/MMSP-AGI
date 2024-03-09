@@ -283,21 +283,7 @@ export function PersonaSelector(props: { conversationId: DConversationId, runExa
           );
         })}
 
-        {/* Persona Creator Tile */}
-        {(editMode || !hidePersonaCreator) && (
-          <Tile
-            text='Persona Creator'
-            symbol='🎭'
-            isActive={false}
-            isEditMode={editMode}
-            isHidden={hidePersonaCreator}
-            onClick={() => editMode ? toggleHiddenPurposeId(PURPOSE_ID_PERSONA_CREATOR) : void navigateToPersonas()}
-            sx={{
-              boxShadow: 'xs',
-              backgroundColor: 'neutral.softDisabledBg',
-            }}
-          />
-        )}
+        
 
 
         {/* [row -3] Description */}
