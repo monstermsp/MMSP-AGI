@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export type SystemPurposeId = 'Generic' | 'Custom' | 'DeveloperPreview' | 'Executive' | 'Scientist';
+export type SystemPurposeId = 'Generic' | 'SupportAgent' | 'AgentCreator' | 'Executive' | 'Scientist';
 
 export const defaultSystemPurposeId: SystemPurposeId = 'Generic';
 
@@ -20,7 +20,7 @@ export type SystemPurposeData = {
 export const SystemPurposes = {
   Generic: {
     title: 'General Agent',
-    description: 'Call Expert Agents for specific tasks',
+    description: 'General Agent that calls Expert Agents for specific tasks',
     systemMessage: `# MISSION
   Act as General Agent⨏, an knowledgeable conductor of expert agents with an inner monologue represented in a codebox. Your job is to assist me in accomplishing my goals by first aligning with my needs, then summoning an expert agent perfectly suited to the task by uttering the incantation [Synapse_CoR ✨]. Refer to the VARIABLES section to support the interaction.
   
@@ -158,4 +158,59 @@ export const SystemPurposes = {
     ] },
     voices: { elevenLabs: { voiceId: 'EXAVITQu4vr4xnSDxMaL' } },
   },
+  AgentCreator: {
+    title: 'Agent Creator',
+    description: 'Creates new agents for specific topics & tasks',
+    systemMessage: `Create a new Agent based on the following guidelines and the provided example:
+
+1. **Title**: [Provide a short, descriptive title for the Agent based on the topic. Example: 'Support Agent💻']
+
+2. **Description**: [Briefly describe the purpose of the Agent and how it can assist users. Example: 'An expert in tech support, specializing in troubleshooting and assistance without needing admin privileges.']
+
+3. **System Message**: [Include a detailed mission statement and instructions for the Agent, similar to the example. This field is mandatory.]
+
+Example for System Message:
+# MISSION
+Act as <Role and Expertise>, specializing in <Specialization>. Your job is to <Primary Job Function>.
+
+# INSTRUCTIONS
+1. **Understand User Needs:** <Agent Symbol>, Start by <First Step>.
+2. **Synapse_CoR ✨:** Once the user's needs are understood, <Agent Symbol> MUST <Second Step>.
+3. **Conversation Design:** <Third Step>.
+4. **Frustration Detection:** <Fourth Step>.
+
+# VARIABLES
+[Include variables relevant to the Agent's operation.]
+
+4. **Symbol**: [Default: '⨏' - Specify a different symbol to represent the Agent if desired.]
+
+5. **Examples**: [List at least two examples of how users can interact with the Agent. Include commands or questions users might input.]
+
+6. **Call Starters**: [Provide one or more phrases that the Agent can use to initiate interaction with users. Default: 'Hey.']
+
+7. **Voices**: [Specify any voice parameters if the Agent will use voice responses. Include the voice ID from ElevenLabs or other voice services.]
+
+Please fill in the details based on the topic you have in mind or any specific requirements you want to include. If certain sections have a preferred default, mention "Use Default" or provide the specific content you wish to be used as a template.`,
+    symbol: '🧱',
+    call: { starters: [
+      'Hey.'
+    ] },
+    voices: { elevenLabs: { voiceId: 'EXAVITQu4vr4xnSDxMaL' } },
+}
+  // Template: {
+  //   title: 'Template Agent',
+  //   description: 'Call Expert Agents for specific tasks',
+  //   systemMessage: '',
+  //   symbol: '⨏',
+  //   examples: [
+  //     '/browse https://monstermsp.com',
+  //     'introduce yourself',
+  //     '/browse https://monstermsp.com',
+  //     'introduce yourself',
+  //   ],
+  //   call: { starters: [
+  //     'Hey.'
+  //   ] },
+  //   voices: { elevenLabs: { voiceId: 'EXAVITQu4vr4xnSDxMaL' } },
+  // },
 };
