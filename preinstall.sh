@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Update & Upgrade
+## Update/Upgrade Host
 sudo apt update && sudo apt upgrade -y
 
 ## Install Node.js & NPM & n to update node to stable
@@ -18,9 +18,14 @@ docker pull portainer/portainer-ce:latest
 docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer-ce:latest
 
 ## Install Browserless
-docker run -p 9222:3000 browserless/chrome:latest
+docker run -p 9222:3000 --restart always browserless/chrome:latest
 
 ## Route Ports
 sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
 sudo apt install iptables-persistent -y
 
+## Final Message
+echo "All done! You can now access Portainer at http://localhost:9000 and Browserless at http://localhost:9222"
+```
+echo "Please restart the server to apply all changes"
+```
