@@ -21,6 +21,7 @@ import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import WorkspacesIcon from '@mui/icons-material/Workspaces';
 import WorkspacesOutlinedIcon from '@mui/icons-material/WorkspacesOutlined';
 // Link icons
+import TabIcon from '@mui/icons-material/Tab';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { DiscordIcon } from '~/common/components/icons/3rdparty/DiscordIcon';
 // Modal icons
@@ -94,27 +95,29 @@ export const navItems: {
       type: 'app',
       route: '/',
     },
-    {
-      name: 'Call',
-      barTitle: 'Voice Calls',
-      icon: CallOutlinedIcon,
-      iconActive: CallIcon,
-      type: 'app',
-      route: '/call',
-      hideDrawer: true,
-      fullWidth: true,
-    },
-    {
-      name: 'Draw',
-      barTitle: 'Generate Images',
-      icon: FormatPaintOutlinedIcon,
-      iconActive: FormatPaintIcon,
-      type: 'app',
-      route: '/draw',
-      // hideOnMobile: true,
-      hideDrawer: true,
-      _delete: true,
-    },
+
+    //HIDING CALL & DRAW
+    // {
+    //   name: 'Call',
+    //   barTitle: 'Voice Calls',
+    //   icon: CallOutlinedIcon,
+    //   iconActive: CallIcon,
+    //   type: 'app',
+    //   route: '/call',
+    //   hideDrawer: true,
+    //   fullWidth: true,
+    // },
+    // {
+    //   name: 'Draw',
+    //   barTitle: 'Generate Images',
+    //   icon: FormatPaintOutlinedIcon,
+    //   iconActive: FormatPaintIcon,
+    //   type: 'app',
+    //   route: '/draw',
+    //   // hideOnMobile: true,
+    //   hideDrawer: true,
+    //   _delete: true,
+    // },
     {
       name: 'Cortex',
       icon: AutoAwesomeOutlinedIcon,
@@ -148,14 +151,15 @@ export const navItems: {
       route: SPECIAL_DIVIDER,
       icon: () => null,
     },
-    {
-      name: 'Personas',
-      icon: Diversity2Icon, // was: Outlined.. but they look the same
-      // iconActive: Diversity2Icon,
-      type: 'app',
-      route: '/personas',
-      hideBar: true,
-    },
+    // HIDING PERSONAS
+    // {
+    //   name: 'Personas',
+    //   icon: Diversity2Icon, // was: Outlined.. but they look the same
+    //   // iconActive: Diversity2Icon,
+    //   type: 'app',
+    //   route: '/personas',
+    //   hideBar: true,
+    // },
     {
       name: 'Media Library',
       icon: ImageOutlinedIcon,
@@ -175,15 +179,16 @@ export const navItems: {
       hideIcon: hasNoChatLinkItems,
       hideNav: hasNoChatLinkItems,
     },
-    {
-      name: 'News',
-      icon: EventNoteOutlinedIcon,
-      iconActive: EventNoteIcon,
-      type: 'app',
-      route: '/news',
-      hideBar: true,
-      hideDrawer: true,
-    },
+    // HIDING NEWS
+    // {
+    //   name: 'News',
+    //   icon: EventNoteOutlinedIcon,
+    //   iconActive: EventNoteIcon,
+    //   type: 'app',
+    //   route: '/news',
+    //   hideBar: true,
+    //   hideDrawer: true,
+    // },
   ],
 
   // Modals
@@ -210,17 +215,17 @@ export const navItems: {
     //   icon: TwitterIcon,
     //   href: 'https://twitter.com',
     // },
+    // {
+    //   type: 'extLink',
+    //   name: 'Discord',
+    //   icon: DiscordIcon,
+    //   href: Brand.URIs.SupportInvite,
+    // },
     {
       type: 'extLink',
-      name: 'Discord',
-      icon: DiscordIcon,
-      href: Brand.URIs.SupportInvite,
-    },
-    {
-      type: 'extLink',
-      name: 'GitHub',
-      icon: GitHubIcon,
-      href: Brand.URIs.OpenRepo,
+      name: 'Website',
+      icon: TabIcon,
+      href: 'https://monstermsp.com',
     },
   ],
 
