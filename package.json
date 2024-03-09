@@ -1,9 +1,9 @@
 {
-  "name": "big-agi",
-  "version": "1.14.1",
+  "name": "mmsp-agi",
+  "version": "1.0.0",
   "private": true,
-  "author": "Enrico Ros <enrico.ros@gmail.com>",
-  "repository": "https://github.com/enricoros/big-agi",
+  "author": "monstermsp <chris@monstermsp.com>",
+  "repository": "https://github.com/monstermsp/MMSP-AGI",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
