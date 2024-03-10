@@ -22,15 +22,20 @@ const desktopSx: SxProps = {
 export const ButtonCallMemo = React.memo(ButtonCall);
 
 export function ButtonCall(props: { isMobile?: boolean, disabled?: boolean, onClick: () => void }) {
-  return props.isMobile ? (
-    <IconButton variant='soft' color='primary' disabled={props.disabled} onClick={props.onClick} sx={mobileSx}>
-      <CallIcon />
-    </IconButton>
-  ) : (
-    <Tooltip disableInteractive variant='solid' arrow placement='right' title={callConversationLegend}>
-      <Button variant='soft' color='primary' disabled={props.disabled} onClick={props.onClick} endDecorator={<CallIcon />} sx={desktopSx}>
-        Call
-      </Button>
-    </Tooltip>
-  );
+  // This function now always returns null, so the component renders nothing
+  return null;
+}
+
+// export function ButtonCall(props: { isMobile?: boolean, disabled?: boolean, onClick: () => void }) {
+//   return props.isMobile ? (
+  //   <IconButton variant='soft' color='primary' disabled={props.disabled} onClick={props.onClick} sx={mobileSx}>
+  //     <CallIcon />
+  //   </IconButton>
+  // ) : (
+  //   <Tooltip disableInteractive variant='solid' arrow placement='right' title={callConversationLegend}>
+  //     <Button variant='soft' color='primary' disabled={props.disabled} onClick={props.onClick} endDecorator={<CallIcon />} sx={desktopSx}>
+  //       Call
+  //     </Button>
+  //   </Tooltip>
+  // );
 }
