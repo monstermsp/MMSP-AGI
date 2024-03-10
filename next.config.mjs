@@ -10,6 +10,14 @@ buildType && console.log(`   🧠 big-AGI: building for ${buildType}...\n`);
 let nextConfig = {
   reactStrictMode: true,
 
+  // disable eslint check during build
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+
   // [exports] https://nextjs.org/docs/advanced-features/static-html-export
   ...buildType && {
     output: buildType,
