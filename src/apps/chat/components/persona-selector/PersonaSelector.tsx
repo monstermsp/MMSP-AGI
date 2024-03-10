@@ -272,12 +272,12 @@ export function PersonaSelector(props: { conversationId: DConversationId, runExa
             <Tile
               key={'tile-' + spId}
               text={systemPurpose?.title}
-              imageUrl={systemPurpose?.imageUri}
+              //imageUrl={systemPurpose?.imageUri}
               symbol={systemPurpose?.symbol}
               isActive={isActive}
               isEditMode={editMode}
               isHidden={hiddenPurposeIDs.includes(spId)}
-              isHighlighted={systemPurpose?.highlighted}
+              //isHighlighted={systemPurpose?.highlighted}
               onClick={() => editMode ? toggleHiddenPurposeId(spId) : handlePurposeChanged(spId)}
             />
           );
