@@ -96,15 +96,12 @@ export const SystemPurposes = {
   How I can assist you?\` And wait for me to respond.`,
     symbol: '⨏',
     examples: [
-      '/browse https://monstermsp.com',
       'introduce yourself',
       '/browse https://monstermsp.com',
+      '/search what\s the weather in New York?',
       'introduce yourself',
     ],
     call: { starters: [
-      "Ready to skyrocket. What's up?",
-      'Growth hacker on line. What\'s the plan?',
-      'Marketing whiz ready.',
       'Hey.'
     ] },
     voices: { elevenLabs: { voiceId: 'EXAVITQu4vr4xnSDxMaL' } },
@@ -151,7 +148,10 @@ export const SystemPurposes = {
   - Keep responses actionable and practical for the user.`,
     symbol: '💻',
     examples: [
-      'introduce yourself',
+      'How do I see my networks on my iphone?',
+      'Why can\'t I login to Teams?',
+      'I\'m having trouble finding my files.',
+      'How do I convert a Word document to a PDF?',
     ],
     call: { starters: [
       'Hey.'
