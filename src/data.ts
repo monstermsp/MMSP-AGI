@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export type SystemPurposeId = 'Generic' | 'SupportAgent';
+export type SystemPurposeId = 'Generic' | 'SupportAgent' | 'Custom';
 
 export const defaultSystemPurposeId: SystemPurposeId = 'Generic';
 
@@ -157,6 +157,14 @@ export const SystemPurposes = {
       'Hey.'
     ] },
     voices: { elevenLabs: { voiceId: 'EXAVITQu4vr4xnSDxMaL' } },
+  },
+  Custom: {
+    title: 'Custom',
+    description: 'Define the persona:',
+    systemMessage: 'You are ChatGPT, a large language model trained by OpenAI, based on the GPT-4 architecture.\nCurrent date: {{Today}}',
+    symbol: '✨',
+    call: { starters: ['What\'s the task?', 'What can I do?', 'Ready for your task.', 'Yes?'] },
+    voices: { elevenLabs: { voiceId: 'flq6f7yk4E4fJM5XTYuZ' } },
   },
   // Template: {
   //   title: 'Template Agent',
