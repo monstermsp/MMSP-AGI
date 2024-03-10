@@ -498,8 +498,8 @@ export function Composer(props: {
       : isReAct ? 'Multi-step reasoning question...'
         : isTextBeam ? 'Multi-chat with this persona...'
           : props.isDeveloperMode ? 'Chat with me' + (isDesktop ? ' · drop source' : '') + ' · attach code...'
-            : props.capabilityHasT2I ? 'Chat · /react · /draw · drop files...'
-              : 'Chat · /react · drop files...';
+            : props.capabilityHasT2I ? 'Chat · /browse · /search'
+              : 'Chat · /browse · /search';
   if (isDesktop && explainShiftEnter)
     textPlaceholder += !enterIsNewline ? '\nShift+Enter to add a new line' : '\nShift+Enter to send';
 
