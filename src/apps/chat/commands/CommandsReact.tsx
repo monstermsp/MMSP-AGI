@@ -7,9 +7,9 @@ export const CommandsReact: ICommandsProvider = {
   rank: 15,
 
   getCommands: () => [{
-    primary: '/react',
+    primary: '/search',
     arguments: ['prompt'],
-    description: 'Use the AI ReAct strategy to answer your query',
+    description: 'Uses Google Search API to get real time infomration',
     Icon: PsychologyIcon,
   }],
 
