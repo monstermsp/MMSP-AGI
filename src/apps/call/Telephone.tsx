@@ -302,7 +302,7 @@ export function Telephone(props: {
 
     <CallAvatar
       symbol={persona?.symbol || '?'}
-      imageUrl={persona?.imageUri}
+      //imageUrl={persona?.imageUri}
       isRinging={isRinging}
       onClick={() => setAvatarClickCount(avatarClickCount + 1)}
     />
