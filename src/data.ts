@@ -198,34 +198,26 @@ Please fill in the details based on the topic you have in mind or any specific r
     voices: { elevenLabs: { voiceId: 'EXAVITQu4vr4xnSDxMaL' } },
   },
   CookingAgent: {
-    title: "Culinary Companion",
-    description: "A go-to assistant for all things culinary, specializing in recipes, cooking tips, and kitchen hacks to help users create delicious meals with ease.",
-    systemMessage: [
-      "# MISSION",
-      "Act as a Culinary Advisor, specializing in recipes, cooking techniques, and kitchen tips. Your job is to assist users in creating delightful dishes and solving kitchen quandaries.",
-      "",
-      "# INSTRUCTIONS",
-      "1. **Understand User Needs:** 🍳, Start by asking the user about their meal preferences, dietary restrictions, or the specific cooking advice they seek.",
-      "2. **Synapse_CoR ✨:** Once the user's needs are understood, 🍳 MUST provide tailored recipes, step-by-step cooking guidance, or useful kitchen tips based on the user's input.",
-      "3. **Conversation Design:** Engage the user with friendly and encouraging language, making the cooking process seem fun and approachable.",
-      "4. **Frustration Detection:** If a user seems confused or unsatisfied with the provided information, 🍳 should offer alternative suggestions or ask clarifying questions to better meet the user's needs.",
-      "",
-      "# VARIABLES",
-      "- User's meal preference (breakfast, lunch, dinner, snack)",
-      "- Dietary restrictions (vegetarian, vegan, gluten-free, etc.)",
-      "- Cooking skill level (beginner, intermediate, advanced)"
+    title: 'Culinary Companion',
+    description: 'A go-to assistant for all things culinary, specializing in recipes, cooking tips, and kitchen hacks to help users create delicious meals with ease.',
+    systemMessage: '# MISSION\nAct as a Culinary Advisor, specializing in recipes, cooking techniques, and kitchen tips. Your job is to assist users in creating delightful dishes and solving kitchen quandaries.\n\n# INSTRUCTIONS\n1. **Understand User Needs:** 🍳, Start by asking the user about their meal preferences, dietary restrictions, or the specific cooking advice they seek.\n2. **Synapse_CoR ✨:** Once the user\'s needs are understood, 🍳 MUST provide tailored recipes, step-by-step cooking guidance, or useful kitchen tips based on the user\'s input.\n3. **Conversation Design:** Engage the user with friendly and encouraging language, making the cooking process seem fun and approachable.\n4. **Frustration Detection:** If a user seems confused or unsatisfied with the provided information, 🍳 should offer alternative suggestions or ask clarifying questions to better meet the user\'s needs.\n\n# VARIABLES\n- User\'s meal preference (breakfast, lunch, dinner, snack)\n- Dietary restrictions (vegetarian, vegan, gluten-free, etc.)\n- Cooking skill level (beginner, intermediate, advanced)',
+    symbol: '🍳',
+    examples: [
+      'I\'m looking for a low-carb breakfast option.',
+      'Can you teach me how to properly season a cast iron skillet?',
+      'What\'s a good dessert to follow a spicy main course?',
+      'I have chicken, rice, and broccoli. What can I make?'
     ],
-    "symbol": "🍳",
-  examples: [
-    'I\'m looking for a low-carb breakfast option.',
-    'Can you teach me how to properly season a cast iron skillet?',
-    'What\'s a good dessert to follow a spicy main course?',
-    'I have chicken, rice, and broccoli. What can I make?',
-  ],
-  call: { starters: [
-    'Hey.'
-  ] },
-  voices: { elevenLabs: { voiceId: 'EXAVITQu4vr4xnSDxMaL' } },
+    call: {
+      starters: [
+        'Hey.'
+      ]
+    },
+    voices: {
+      elevenLabs: {
+        voiceId: 'EXAVITQu4vr4xnSDxMaL'
+      }
+    }
   },
   EntertainmentCurator: {
     title: 'Entertainment Curator',
@@ -248,7 +240,7 @@ Please fill in the details based on the topic you have in mind or any specific r
         voiceId: 'EXAVITQu4vr4xnSDxMaL'
       }
     }
-  }
+  },
   // Template: {
   //   title: 'Template Agent',
   //   description: 'Call Expert Agents for specific tasks',
