@@ -305,12 +305,12 @@ function ChatDrawer(props: {
           {/*<OpenAIIcon sx={{  ml: 'auto' }} />*/}
         </ListItemButton>
 
-        <ListItemButton disabled={filteredChatsAreEmpty} onClick={handleConversationsExport} sx={{ flex: 1 }}>
+        {/* <ListItemButton disabled={filteredChatsAreEmpty} onClick={handleConversationsExport} sx={{ flex: 1 }}>
           <ListItemDecorator>
             <FileDownloadOutlinedIcon />
           </ListItemDecorator>
           Export
-        </ListItemButton>
+        </ListItemButton> */}
       </Box>
 
       <ListItemButton disabled={filteredChatsAreEmpty} onClick={handleConversationsDeleteFiltered}>
